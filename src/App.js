@@ -1,15 +1,15 @@
-import { Fragment } from "react";
 import { Form } from "./components/Form";
 import { Header } from "./components/Header";
+import { CategoryProvider } from "./context/CategoryContext";
 
 function App() {
   return (
-    <Fragment>
+    <CategoryProvider>
       <Header />
       <div className="container">
         <Form />
       </div>
-    </Fragment>
+    </CategoryProvider>
   );
 }
 

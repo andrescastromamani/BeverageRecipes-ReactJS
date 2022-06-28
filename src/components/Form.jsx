@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CategoryContext } from '../context/CategoryContext'
 
 export const Form = () => {
+    const { categories } = useContext(CategoryContext);
+    console.log(categories);
     return (
         <form action="">
             <div className="row mt-3">
-                <h2 className='text-center h5'>Search Beverage for category</h2>
                 <div className="col-12 col-md-4 mb-3">
                     <label htmlFor="name" className='form-label'>Name</label>
                     <input type="text" className='form-control' name='name' />
