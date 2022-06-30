@@ -4,7 +4,7 @@ import { RecipeContext } from '../context/RecipeContext';
 
 export const Form = () => {
     const { categories } = useContext(CategoryContext);
-    const { setData } = useContext(RecipeContext);
+    const { setData, setConsult } = useContext(RecipeContext);
     const [beverage, setBeverage] = useState({
         name: '',
         category: ''
@@ -18,6 +18,7 @@ export const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setData(beverage)
+        setConsult(true);
     }
     return (
         <form
