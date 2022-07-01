@@ -10,7 +10,6 @@ export const RecipeProvider = ({ children }) => {
     const getRecipes = async () => {
         const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${data.name}&c=${data.category}`;
         const response = await axios.get(url);
-        console.log(response.data.drinks);
         setRecipes(response.data.drinks)
     }
     useEffect(() => {
